@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.LibrosPanama" parent="Base.Theme.LibrosPanama" />
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <!-- Otros estilos que desees para tu splash screen -->
+    </style>
+
 </resources>
