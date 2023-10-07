@@ -38,7 +38,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="627dp"
+            android:layout_height="483dp"
             android:background="@color/white"
             android:orientation="vertical"
             android:padding="28dp">
@@ -54,87 +54,63 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Por favor ingresa tu información" />
+                android:text="Por favor llena los campos" />
 
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="30dp" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/name"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/naranjaprincipal"
-                android:hint="Nombre Completo">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:textColor="@color/naranjaprincipal"
-                    android:layout_height="wrap_content" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/username"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="@color/naranjaprincipal"
                 android:hint="Nombre De Usuario"
-                app:counterEnabled="true"
-                app:counterMaxLength="15">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:textColor="@color/naranjaprincipal"
-                    android:layout_height="wrap_content" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/email"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColorHint="@color/naranjaprincipal"
-                android:hint="Correo Electronico">
+                android:textColorHint="@color/naranjaprincipal">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/naranjaprincipal"
-                    android:inputType="textEmailAddress" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/phoneno"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:textColorHint="@color/naranjaprincipal"
-                android:layout_height="wrap_content"
-                android:hint="Numero De Telefono">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:textColor="@color/naranjaprincipal"
-                    android:layout_height="wrap_content"
-                    android:inputType="number" />
+                    android:textColor="@color/naranjaprincipal" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/password"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:textColorHint="@color/naranjaprincipal"
                 android:layout_height="wrap_content"
                 android:hint="Contraseña"
+                android:textColorHint="@color/naranjaprincipal"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
-                    android:textColor="@color/naranjaprincipal"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:textColor="@color/naranjaprincipal" />
             </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/naranjaprincipal"
+                    android:text="Recordar Contraseña"
+                    android:layout_centerVertical="true"
+                    android:alpha="0.7"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/naranjaprincipal"
+                    android:text="¿Olvidaste tu contraseña?"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
 
             <Button
                 android:layout_width="match_parent"
@@ -142,11 +118,10 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:backgroundTint="@color/naranjaprincipal"
-                android:text="REGISTRAR"
+                android:text="INICIA SESIÓN"
                 android:textColor="@color/white" />
 
             <Button
-                android:id="@+id/login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
@@ -154,7 +129,7 @@
                 android:alpha="0.7"
                 android:background="#00000000"
                 android:elevation="0dp"
-                android:text="¿Ya estas registrado? INICIA SESIÓN"
+                android:text="¿No estas registrado? REGISTRATE"
                 android:textColor="@color/naranjaprincipal" />
 
         </LinearLayout>

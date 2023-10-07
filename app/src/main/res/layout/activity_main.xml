@@ -45,20 +45,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_backprincipal" />
 
-    <TextView
-        android:id="@+id/txt_inicio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="64dp"
-        android:contextClickable="true"
-        android:text="@string/ya_tienes_una_cuenta_inicia_sesion"
-        android:textColor="#DB946E"
-        android:textSize="14sp"
+    <Button
+        android:id="@+id/btn_iniciar"
+        android:layout_width="286dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:alpha="0.7"
+        android:background="#00000000"
+        android:elevation="0dp"
+        android:text="¿Ya tienes una cuenta? Inicia Sesión"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/naranjaprincipal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_crearcuenta"
-        tools:ignore="UnusedAttribute" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_crearcuenta" />
 </androidx.constraintlayout.widget.ConstraintLayout>
