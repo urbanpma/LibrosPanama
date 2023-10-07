@@ -141,6 +141,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
+                android:onClick="registrarUsuarios"
                 android:backgroundTint="@color/naranjaprincipal"
                 android:text="REGISTRAR"
                 android:textColor="@color/white" />
