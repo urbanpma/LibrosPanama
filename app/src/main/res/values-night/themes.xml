@@ -8,7 +8,13 @@
 
     <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@color/white</item>
+        <item name="colorPrimary">@color/white</item>
         <!-- Otros estilos que desees para tu splash screen -->
+    </style>
+
+    <style name="ToolbarActivity2" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/naranjaprincipal</item>
+        <item name="android:navigationBarColor">@color/white</item>
     </style>
 
 </resources>

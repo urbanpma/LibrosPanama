@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/img_logo"
         android:layout_width="80dp"
         android:layout_height="75dp"
         android:layout_marginTop="16dp"
@@ -16,46 +16,49 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo"
-        app:tint="#FFDB946E" />
+        app:tint="#FFDB946E"
+        android:contentDescription="@string/logo_empresa" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/img_backprincipal"
         android:layout_width="317dp"
         android:layout_height="394dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:srcCompat="@drawable/iconreadingbook" />
+        app:layout_constraintTop_toBottomOf="@+id/img_logo"
+        app:srcCompat="@drawable/iconreadingbook"
+        android:contentDescription="@string/logo_al_iniciar" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_crearcuenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="86dp"
         android:backgroundTint="#DB946E"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
-        android:text="CREAR UNA CUENTA"
+        android:text="@string/crear_una_cuenta"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/img_backprincipal" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txt_inicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="64dp"
         android:contextClickable="true"
-        android:text="¿Ya Tienes una cuenta? Inicia Sesion"
+        android:text="@string/ya_tienes_una_cuenta_inicia_sesion"
         android:textColor="#DB946E"
-        android:textSize="14dp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_crearcuenta"
+        tools:ignore="UnusedAttribute" />
 </androidx.constraintlayout.widget.ConstraintLayout>
