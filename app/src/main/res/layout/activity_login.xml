@@ -61,21 +61,22 @@
                 android:layout_height="30dp" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/username"
+                android:id="@+id/emailLogin"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nombre De Usuario"
+                android:hint="Correo Electronico"
                 android:textColorHint="@color/naranjaprincipal">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
                     android:textColor="@color/naranjaprincipal" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/password"
+                android:id="@+id/passwordLogin"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -119,6 +120,7 @@
                 android:layout_marginBottom="5dp"
                 android:backgroundTint="@color/naranjaprincipal"
                 android:text="INICIA SESIÓN"
+                android:onClick="iniciarSesion"
                 android:textColor="@color/white" />
 
             <Button
