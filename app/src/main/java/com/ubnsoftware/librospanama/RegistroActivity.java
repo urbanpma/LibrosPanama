@@ -1,14 +1,11 @@
 package com.ubnsoftware.librospanama;
 
-import static android.content.ContentValues.TAG;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -17,14 +14,17 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class RegistroActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
-    private TextInputLayout correo;
-    private TextInputLayout contra;
-    private String email;
-    private String password;
+    private DatabaseReference mDatabase;
+    private TextInputLayout name, username, correo, phone, contra;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,32 +32,44 @@ public class RegistroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registro);
 
         mAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         FirebaseUser currentUser = mAuth.getCurrentUser();
+        name = findViewById(R.id.name);
+        username = findViewById(R.id.username);
         correo = findViewById(R.id.email);
+        phone = findViewById(R.id.phoneno);
         contra = findViewById(R.id.password);
-
-        EditText editTextEmail = correo.getEditText();
-        EditText editTextPassword = contra.getEditText();
-
-        email = editTextEmail.getText().toString().trim();
-        password = editTextPassword.getText().toString().trim();
-
     }
 
     public void registrarUsuarios (View view){
-
         mAuth.createUserWithEmailAndPassword(correo.getEditText().getText().toString(), contra.getEditText().getText().toString())
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                if (task.isSuccessful()){
-                   Toast.makeText(getApplicationContext(), "Registro Creado Correctamente", Toast.LENGTH_SHORT).show();
+
+                   Map<String, Object> map = new HashMap<>();
+                   map.put("Nombre", name.getEditText().getText().toString());
+                   map.put("Usuario", username.getEditText().getText().toString());
+                   map.put("Correo", correo.getEditText().getText().toString());
+                   map.put("Telefono", phone.getEditText().getText().toString());
+                   map.put("Contra", contra.getEditText().getText().toString());
+
+                   String UID = mAuth.getCurrentUser().getUid();
                    FirebaseUser user = mAuth.getCurrentUser();
-                   Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-                   startActivity(intent);
-                   finish();
+
+                   mDatabase.child("Usuarios").child(UID).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                       @Override
+                       public void onComplete(@NonNull Task<Void> task2) {
+                           if (task2.isSuccessful()){
+                               Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                               startActivity(intent);
+                               finish();
+                           }
+                       }
+                   });
                } else{
-                   Toast.makeText(getApplicationContext(), "Fallo en la autenticación", Toast.LENGTH_SHORT).show();
+                   Toast.makeText(getApplicationContext(), "Error en la creación de usuario.", Toast.LENGTH_SHORT).show();
                }
             }
         });

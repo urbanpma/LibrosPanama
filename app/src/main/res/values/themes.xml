@@ -8,9 +8,10 @@
 
     <style name="Theme.LibrosPanama" parent="Base.Theme.LibrosPanama" />
 
-    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="SplashTheme" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:windowBackground">@color/white</item>
         <item name="colorPrimary">@color/white</item>
+        <item name="android:navigationBarColor">@color/white</item>
         <!-- Otros estilos que desees para tu splash screen -->
     </style>
 
