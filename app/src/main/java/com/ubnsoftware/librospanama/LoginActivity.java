@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -19,7 +21,8 @@ public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private TextInputLayout correo, contra;
-    private String email, password;
+    TextView recovery;
+    Button registrar;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +33,28 @@ public class LoginActivity extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         correo = findViewById(R.id.emailLogin);
         contra = findViewById(R.id.passwordLogin);
+        registrar = findViewById(R.id.btn_loginRegistro);
+        recovery = findViewById(R.id.txt_recovery);
+
+        registrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, CreateUserActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        recovery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, RecoveryPassActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
+
 
     public void iniciarSesion(View view){
         mAuth.signInWithEmailAndPassword(correo.getEditText().getText().toString(), contra.getEditText().getText().toString())
