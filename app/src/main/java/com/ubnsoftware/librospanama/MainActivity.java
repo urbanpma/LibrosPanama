@@ -20,15 +20,6 @@ public class MainActivity extends AppCompatActivity {
         btnRegistrar = findViewById(R.id.btn_crearcuenta);
         btnLogin = findViewById(R.id.btn_iniciar);
 
-        // Verificar el estado de inicio de sesión
-        SessionManager session = new SessionManager(getApplicationContext());
-        if (session.isLoggedIn()) {
-            Intent intent = new Intent(this, HomeActivity.class);
-            startActivity(intent);
-            finish();
-        }
-
-
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
