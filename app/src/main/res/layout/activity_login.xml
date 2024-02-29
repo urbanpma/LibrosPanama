@@ -110,6 +110,7 @@
                     android:textColor="@color/naranjaprincipal"
                     android:text="¿Olvidaste tu contraseña?"
                     android:layout_alignParentEnd="true"
+                    android:clickable="true"
                     android:layout_centerVertical="true"/>
 
             </RelativeLayout>
