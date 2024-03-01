@@ -1,37 +1,26 @@
 {
   "project_info": {
-    "project_number": "958074066035",
-    "firebase_url": "https://raplegends-a4243.firebaseio.com",
-    "project_id": "raplegends-a4243",
-    "storage_bucket": "raplegends-a4243.appspot.com"
+    "project_number": "918320709275",
+    "project_id": "librospanama-b2565",
+    "storage_bucket": "librospanama-b2565.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:958074066035:android:82eeb7a255415400be8606",
+        "mobilesdk_app_id": "1:918320709275:android:5d064d10bd658a3148503e",
         "android_client_info": {
           "package_name": "com.ubnsoftware.librospanama"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "958074066035-am67dahujsc3e4d7h7lqqfhuutbbdhg8.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDZ_atjdl7OHSgJPkUGnO_CeNv78JzywLE"
+          "current_key": "AIzaSyAI-rNHfZf_-anEUx07v0YPgN6X2lY-f-k"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "958074066035-am67dahujsc3e4d7h7lqqfhuutbbdhg8.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
