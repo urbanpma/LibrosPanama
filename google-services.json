@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "918320709275",
+    "project_id": "librospanama-b2565",
+    "storage_bucket": "librospanama-b2565.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918320709275:android:5d064d10bd658a3148503e",
+        "android_client_info": {
+          "package_name": "com.ubnsoftware.librospanama"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAI-rNHfZf_-anEUx07v0YPgN6X2lY-f-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
