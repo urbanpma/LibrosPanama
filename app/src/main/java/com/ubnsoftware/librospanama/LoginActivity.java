@@ -67,7 +67,6 @@ public class LoginActivity extends AppCompatActivity {
                             SessionManager session = new SessionManager(getApplicationContext());
                             session.setLogin(true);
                             startActivity(intent);
-                            finish();
                         } else {
                             Toast.makeText(LoginActivity.this, "Error en el login: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
